@@ -1,0 +1,31 @@
+:root {
+  --bs-primary: #c62828;
+  --bs-primary-rgb: 198, 40, 40;
+  --bs-dark: #212529;
+  --bs-dark-rgb: 33, 37, 41;
+  --bs-link-color: #c62828;
+  --bs-link-color-rgb: 198, 40, 40;
+  --bs-link-hover-color: #a61f1f;
+  --bs-link-hover-color-rgb: 166, 31, 31;
+  --bs-nav-link-color: #c62828;
+  --bs-nav-link-hover-color: #a61f1f;
+  --bs-table-color: #212529;
+}
+
+.table {
+  --bs-table-color: #212529;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* table cell content alignment to top */
+.table td,
+.table th {
+  vertical-align: top;
+}
