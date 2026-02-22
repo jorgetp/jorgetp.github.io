@@ -3,7 +3,7 @@ all: serve pretty
 .PHONY: serve
 serve:
 	@echo "Starting development server..."
-	python3 -m http.server 8000
+	python3 -m http.server 6060
 
 .PHONY: pretty
 pretty:
