@@ -12,10 +12,6 @@
   --bs-table-color: #212529;
 }
 
-.table {
-  --bs-table-color: #212529;
-}
-
 a {
   text-decoration: none;
 }
@@ -24,7 +20,15 @@ a:hover {
   text-decoration: underline;
 }
 
-/* table cell content alignment to top */
+.table {
+  --bs-table-color: #212529;
+}
+
+.table-striped > tbody > tr > td,
+.table-striped > tbody > tr > th {
+  color: var(--bs-table-color);
+}
+
 .table td,
 .table th {
   vertical-align: top;
