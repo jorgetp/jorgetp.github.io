@@ -1,11 +1,11 @@
 <!doctype html>
-<html lang="en" data-bs-theme="auto">
+<html lang="en" data-bs-theme="dark">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Jorge Toro</title>
     <link rel="icon" href="assets/img/icon.png" />
-    <script>
+    <!--<script>
       const setTheme = () => {
         const isDark = window.matchMedia(
           "(prefers-color-scheme: dark)",
@@ -19,7 +19,7 @@
       window
         .matchMedia("(prefers-color-scheme: dark)")
         .addEventListener("change", setTheme);
-    </script>
+    </script>-->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -37,17 +37,21 @@
       a:hover {
         text-decoration: underline;
       }
+      .table td,
+      .table th {
+        vertical-align: top;
+      }
     </style>
   </head>
   <body>
-    <div class="container mt-3 mt-md-5 pt-md-3">
-      <div class="row g-3 g-md-5">
+    <div class="container mt-4 mt-md-5 pt-md-3">
+      <div class="row g-4 g-md-4">
         <!-- Sidebar -->
         <div class="col-md-3">
           <div
-            class="rounded-3 p-4 d-flex gap-3 flex-md-column align-items-center"
+            class="px-0 px-md-4 d-flex gap-4 flex-md-column align-items-center"
           >
-            <div class="w-75">
+            <div class="w-75 align-self-start">
               <img
                 src="assets/img/profile.jpg"
                 alt="Profile picture"
@@ -68,7 +72,7 @@
                   >LinkedIn</a
                 >
                 <a href="https://github.com/jorgetp" target="_blank"
-                  ><i class="bi bi-github me-2" aria-hidden="true"></i>Github</a
+                  ><i class="bi bi-github me-2" aria-hidden="true"></i>GitHub</a
                 >
               </div>
             </div>
@@ -156,14 +160,14 @@
               role="tabpanel"
               aria-labelledby="home-tab"
             >
-              <div class="p-3">
-                <h3>About me</h3>
-                <p class="alert alert-warning">
-                  <i class="fa fa-info-circle text-info" aria-hidden="true"></i>
+              <div class="py-3">
+                <p class="alert alert-dark">
+                  <i class="bi bi-info-circle text-warning me-1"></i>
                   This website is mostly about my academic career. I no longer
                   update it regularly since Jan 2023 when I went into industry.
                 </p>
 
+                <h3>About me</h3>
                 <p>
                   I am a Senior Security Engineer at
                   <a href="https://www.six-group.com">SIX</a>. Previously, I was
@@ -358,7 +362,7 @@
               role="tabpanel"
               aria-labelledby="publications-tab"
             >
-              <div class="p-3">
+              <div class="py-3">
                 <h3>Publications</h3>
                 <p>
                   These are some of my publications. For a complete list, please
@@ -644,7 +648,7 @@
               role="tabpanel"
               aria-labelledby="awards-tab"
             >
-              <div class="p-3">
+              <div class="py-3">
                 <h3>Honors & Awards</h3>
                 <p>These are some of my selected honors and awards.</p>
 
@@ -724,7 +728,7 @@
               role="tabpanel"
               aria-labelledby="teaching-tab"
             >
-              <div class="p-3">
+              <div class="py-3">
                 <h3>Teaching</h3>
                 <p>
                   I have been part of the teaching team for the following
