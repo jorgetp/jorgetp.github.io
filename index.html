@@ -4,22 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Jorge Toro</title>
-    <link rel="icon" href="assets/img/icon.png" />
-    <script>
-      const setTheme = () => {
-        const isDark = window.matchMedia(
-          "(prefers-color-scheme: dark)",
-        ).matches;
-        document.documentElement.setAttribute(
-          "data-bs-theme",
-          isDark ? "dark" : "light",
-        );
-      };
-      setTheme();
-      window
-        .matchMedia("(prefers-color-scheme: dark)")
-        .addEventListener("change", setTheme);
-    </script>
+    <!--<link rel="icon" href="assets/img/icon.png" />-->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -30,243 +15,224 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
     />
-    <style>
-      a {
-        text-decoration: none;
-      }
-      a:hover {
-        text-decoration: underline;
-      }
-      .table td,
-      .table th {
-        vertical-align: top;
-        color: var(--bs-body-color);
-      }
-    </style>
+    <link rel="stylesheet" href="assets/css/style.css" />
   </head>
   <body>
-    <div class="container pb-2">
-      <div class="row mt-3 mt-md-5">
-        <!-- Sidebar -->
-        <div class="col-md-3 mb-4">
-          <div
-            class="px-0 px-md-4 d-flex gap-4 flex-md-column align-items-center"
-          >
-            <div class="w-75 align-self-start">
-              <img
-                src="assets/img/profile.jpg"
-                alt="Profile picture"
-                class="img-fluid rounded-circle p-1 border"
-              />
+    <div class="container mt-4 pb-2">
+      <div class="d-flex justify-content-between align-items-center mb-2">
+        <div class="d-flex flex-column gap-1">
+          <h1 class="mb-0">Jorge Toro</h1>
+          <div class="text-muted">Senior Security Engineer, PhD</div>
+          <div class="mt-1 d-flex gap-2 flex-wrap align-items-center">
+            <div class="alert bg-dark-subtle py-1 px-2 small">
+              <a href="https://www.six-group.com/en/home.html" target="_blank"
+                ><i class="bi bi-building-fill me-2" aria-hidden="true"></i
+                >SIX</a
+              >
             </div>
-            <div class="text-start w-100">
-              <h3 class="mb-1">Jorge Toro</h3>
-              <p class="text-muted mb-3">Sr. Security Engineer, PhD</p>
-
-              <!--<h3 class="h6 text-uppercase text-secondary">Social</h3>-->
-              <div class="d-flex flex-column mb-0 gap-2">
-                <a href="https://www.six-group.com/en/home.html" target="_blank"
-                  ><i class="bi bi-building-fill me-2" aria-hidden="true"></i
-                  >SIX</a
-                >
-                <a href="https://www.linkedin.com/in/jtoropozo" target="_blank"
-                  ><i class="bi bi-linkedin me-2" aria-hidden="true"></i
-                  >LinkedIn</a
-                >
-                <a href="https://github.com/jorgetp" target="_blank"
-                  ><i class="bi bi-github me-2" aria-hidden="true"></i>GitHub</a
-                >
-              </div>
+            <div class="alert bg-dark-subtle py-1 px-2 small">
+              <a href="https://www.linkedin.com/in/jtoropozo" target="_blank"
+                ><i class="bi bi-linkedin me-2" aria-hidden="true"></i
+                >LinkedIn</a
+              >
+            </div>
+            <div class="alert bg-dark-subtle py-1 px-2 small">
+              <a href="https://github.com/jorgetp" target="_blank"
+                ><i class="bi bi-github me-2" aria-hidden="true"></i>GitHub</a
+              >
             </div>
           </div>
         </div>
-
-        <!-- Main content -->
-        <div class="col-md-9">
-          <ul class="nav nav-tabs" id="myTab" role="tablist">
-            <li class="nav-item" role="presentation">
-              <button
-                class="nav-link active"
-                id="home-tab"
-                data-bs-toggle="tab"
-                data-bs-target="#home"
-                type="button"
-                role="tab"
-                aria-controls="home"
-                aria-selected="true"
-              >
-                Profile
-              </button>
-            </li>
-            <li class="nav-item" role="presentation">
-              <button
-                class="nav-link"
-                id="projects-tab"
-                data-bs-toggle="tab"
-                data-bs-target="#projects"
-                type="button"
-                role="tab"
-                aria-controls="projects"
-                aria-selected="false"
-              >
-                Projects
-              </button>
-            </li>
-            <li class="nav-item" role="presentation">
-              <button
-                class="nav-link"
-                id="publications-tab"
-                data-bs-toggle="tab"
-                data-bs-target="#publications"
-                type="button"
-                role="tab"
-                aria-controls="publications"
-                aria-selected="false"
-              >
-                Publications
-              </button>
-            </li>
-            <li class="nav-item" role="presentation">
-              <button
-                class="nav-link"
-                id="teaching-tab"
-                data-bs-toggle="tab"
-                data-bs-target="#teaching"
-                type="button"
-                role="tab"
-                aria-controls="teaching"
-                aria-selected="false"
-              >
-                Teaching
-              </button>
-            </li>
-            <li class="nav-item" role="presentation">
-              <button
-                class="nav-link"
-                id="talks-tab"
-                data-bs-toggle="tab"
-                data-bs-target="#talks"
-                type="button"
-                role="tab"
-                aria-controls="talks"
-                aria-selected="false"
-              >
-                Talks
-              </button>
-            </li>
-            <li class="nav-item" role="presentation">
-              <button
-                class="nav-link"
-                id="awards-tab"
-                data-bs-toggle="tab"
-                data-bs-target="#awards"
-                type="button"
-                role="tab"
-                aria-controls="awards"
-                aria-selected="false"
-              >
-                Honors & Awards
-              </button>
-            </li>
-          </ul>
-          <div class="tab-content" id="myTabContent">
-            <div
-              class="tab-pane fade show active"
-              id="home"
-              role="tabpanel"
-              aria-labelledby="home-tab"
-            >
-              <div class="py-3">
-                <!--<p class="alert alert-warning">
+        <img
+          src="assets/img/profile.jpg"
+          alt="Profile picture"
+          class="img-fluid rounded-circle p-1 border"
+          style="width: 110px"
+        />
+      </div>
+      <ul
+        class="nav border-top border-bottom border-dark-subtle border-2 py-2 gap-2"
+        id="myTab"
+        role="tablist"
+      >
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link active"
+            id="home-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#home"
+            type="button"
+            role="tab"
+            aria-controls="home"
+            aria-selected="true"
+          >
+            About me
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link"
+            id="projects-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#projects"
+            type="button"
+            role="tab"
+            aria-controls="projects"
+            aria-selected="false"
+          >
+            Projects
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link"
+            id="publications-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#publications"
+            type="button"
+            role="tab"
+            aria-controls="publications"
+            aria-selected="false"
+          >
+            Publications
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link"
+            id="teaching-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#teaching"
+            type="button"
+            role="tab"
+            aria-controls="teaching"
+            aria-selected="false"
+          >
+            Teaching
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link"
+            id="talks-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#talks"
+            type="button"
+            role="tab"
+            aria-controls="talks"
+            aria-selected="false"
+          >
+            Talks
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link"
+            id="awards-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#awards"
+            type="button"
+            role="tab"
+            aria-controls="awards"
+            aria-selected="false"
+          >
+            Honors & Awards
+          </button>
+        </li>
+      </ul>
+      <div class="tab-content" id="myTabContent">
+        <div
+          class="tab-pane fade show active"
+          id="home"
+          role="tabpanel"
+          aria-labelledby="home-tab"
+        >
+          <div class="py-3">
+            <!--<p class="alert alert-warning">
                   <i class="bi bi-info-circle me-1"></i>
                   This website is mostly about my academic career. I no longer
                   update it regularly since Jan 2023 when I went into industry.
                 </p>-->
 
-                <h3>About me</h3>
-                <p>
-                  I am a Senior Security Engineer at
-                  <a href="https://www.six-group.com">SIX</a>, with several
-                  years of experience securing critical infrastructure and
-                  cloud-native platforms. With a proven track record of
-                  delivering production-grade security services in the financial
-                  industry, I specialize in PKI, HSMs, IAM, secrets management,
-                  and applied cryptography. I have also contributed to
-                  industry-wide security improvements through research adopted
-                  by Mastercard and the broader payments ecosystem.
-                </p>
-                <p>
-                  Previously, I was a Postdoctoral Researcher at
-                  <a href="https://ethz.ch/en.html">ETH Zurich</a>, within Prof.
-                  Basin's Information Security Group. In 2019, I completed my
-                  PhD in Computer Science at the
-                  <a href="https://www.uni.lu">University of Luxembourg</a>,
-                  under the supervision of Prof. Mauw and Dr. Trujillo. During
-                  my academic career, I developed and applied techniques and
-                  tools to produce machine-verifiable security proofs and to
-                  identify practical attacks in real-world cryptographic
-                  protocols.
-                </p>
+            <h3>About me</h3>
+            <p>
+              I am a Senior Security Engineer at
+              <a href="https://www.six-group.com">SIX</a>, with several years of
+              experience securing critical financial infrastructure and
+              cloud-native platforms. I am passionate about building secure
+              systems and protecting sensitive data, hence my focus on
+              application security and applied cryptography. I have also
+              contributed to industry-wide security improvements through
+              research adopted by Mastercard and the broader payments ecosystem.
+            </p>
 
-                <p>
-                  My <a href="https://emvrace.github.io/">academic work</a> has
-                  contributed to strengthening the security of electronic
-                  payment systems. We have identified and helped mitigate
-                  critical vulnerabilities in the global payment standard EMV
-                  (Europay, Mastercard, VISA), leading to practical attacks such
-                  as
-                  <strong
-                    >PIN-verification bypasses affecting billions of contactless
-                    cards</strong
-                  >. Our findings received international media coverage,
-                  including
-                  <a
-                    href="https://www.zdnet.com/article/academics-bypass-pins-for-visa-contactless-payments/"
-                    >ZDNet</a
-                  >, The Hacker News (<a
-                    href="https://thehackernews.com/2020/09/emv-payment-card-pin-hacking.html"
-                    >Sep'20</a
-                  >,
-                  <a
-                    href="https://thehackernews.com/2021/02/new-hack-lets-attackers-bypass.html"
-                    >Feb'21</a
-                  >),
-                  <a
-                    href="https://www.srf.ch/news/schweiz/eth-forscher-warnen-sicherheitsluecke-bei-visa-kreditkarten-entdeckt"
-                    >Schweizer Radio und Fernsehen (SRF)</a
-                  >, ACM TechNews (<a
-                    href="https://technews.acm.org/archives.cfm?fo=2020-09-sep/sep-04-2020.html#1130993"
-                    >Sep'20</a
-                  >,
-                  <a
-                    href="https://technews.acm.org/archives.cfm?fo=2021-02-feb/feb-26-2021.html#1151729"
-                    >Feb'21</a
-                  >),
-                  <a
-                    href="https://www.heise.de/security/meldung/Zahlen-ohne-PIN-Forscher-knacken-Visas-NFC-Bezahlfunktion-4881555.html"
-                    >heise</a
-                  >, and
-                  <a
-                    href="https://www.vgtv.no/video/205022/ny-svindelmetode-slik-kan-de-kopiere-kortet-ditt-i-koeen"
-                    >VG TV</a
-                  >. Following our disclosure, Mastercard deployed
-                  countermeasures that prevent some of the attacks we
-                  identified.
-                  <!--Furthermore, the next generation of EMV
+            <p>
+              Previously, I was a Postdoctoral Researcher at
+              <a href="https://ethz.ch/en.html">ETH Zurich</a>, within Prof.
+              Basin's Information Security Group. In 2019, I completed my PhD in
+              Computer Science at the
+              <a href="https://www.uni.lu">University of Luxembourg</a>, under
+              the supervision of Prof. Mauw and Dr. Trujillo. During my academic
+              career, I developed and applied techniques and tools to produce
+              machine-verifiable security proofs and to identify practical
+              attacks in real-world cryptographic protocols.
+            </p>
+
+            <p>
+              My <a href="https://emvrace.github.io/">research</a> has
+              contributed to strengthening the security of electronic payment
+              systems. We have identified and helped mitigate critical
+              vulnerabilities in the global payment standard EMV (Europay,
+              Mastercard, VISA), leading to practical attacks such as
+              <strong
+                >PIN-verification bypasses affecting billions of contactless
+                cards</strong
+              >. Our findings received international media coverage, including
+              <a
+                href="https://www.zdnet.com/article/academics-bypass-pins-for-visa-contactless-payments/"
+                >ZDNet</a
+              >, The Hacker News (<a
+                href="https://thehackernews.com/2020/09/emv-payment-card-pin-hacking.html"
+                >Sep'20</a
+              >,
+              <a
+                href="https://thehackernews.com/2021/02/new-hack-lets-attackers-bypass.html"
+                >Feb'21</a
+              >),
+              <a
+                href="https://www.srf.ch/news/schweiz/eth-forscher-warnen-sicherheitsluecke-bei-visa-kreditkarten-entdeckt"
+                >Schweizer Radio und Fernsehen (SRF)</a
+              >, ACM TechNews (<a
+                href="https://technews.acm.org/archives.cfm?fo=2020-09-sep/sep-04-2020.html#1130993"
+                >Sep'20</a
+              >,
+              <a
+                href="https://technews.acm.org/archives.cfm?fo=2021-02-feb/feb-26-2021.html#1151729"
+                >Feb'21</a
+              >),
+              <a
+                href="https://www.heise.de/security/meldung/Zahlen-ohne-PIN-Forscher-knacken-Visas-NFC-Bezahlfunktion-4881555.html"
+                >heise</a
+              >, and
+              <a
+                href="https://www.vgtv.no/video/205022/ny-svindelmetode-slik-kan-de-kopiere-kortet-ditt-i-koeen"
+                >VG TV</a
+              >. Following our disclosure, Mastercard deployed countermeasures
+              that prevent some of the attacks we identified.
+              <!--Furthermore, the next generation of EMV
                   incorporates security mechanisms influenced by our research. -->
-                </p>
+            </p>
 
-                <h4 class="py-2">News & Announcements</h4>
+            <h5 class="pt-3 pb-2">News & Announcements</h5>
 
-                <div class="alert alert-success fw-bold mb-2">
-                  <i class="bi bi-star-fill me-1"></i>
-                  Check out
-                  <a href="https://keyauthority.net" target="_blank"
-                    >KeyAuthority</a
-                  >, our PKI & Secrets Management solution for enterprises!
-                </div>
+            <div class="alert alert-dark mb-2">
+              <i class="bi bi-star-fill me-1"></i>
+              Check out
+              <a href="https://keyauthority.net" target="_blank">KeyAuthority</a
+              >, our PKI & Secrets Management solution for enterprises!
+            </div>
 
-                <!--<div class="alert alert-info mb-2">
+            <!--<div class="alert alert-info mb-2">
                   <i class="bi bi-megaphone-fill me-1"></i> Jul 2026: We have
                   partnered with
                   <a href="https://securosys.com" target="_blank">Securosys</a>
@@ -274,899 +240,867 @@
                   KeyAuthority.
                 </div>-->
 
-                <div class="alert alert-light mb-2">
-                  <i class="bi bi-briefcase-fill me-1"></i> Dec 2022: I'll be
-                  starting a new job at
-                  <a href="https://www.sdx.com" target="_blank"
-                    >SIX Digital Exchange (SDX)</a
-                  >
-                  in January 2023.
-                </div>
+            <!--<div class="alert alert-light mb-2">
+              <i class="bi bi-briefcase-fill me-1"></i> Dec 2022: I'll be
+              starting a new job at
+              <a href="https://www.sdx.com" target="_blank"
+                >SIX Digital Exchange (SDX)</a
+              >
+              in January 2023.
+            </div>-->
 
-                <div class="alert alert-light mb-2">
-                  <i class="bi bi-check-circle-fill me-1"></i> Sep 2022: Our
-                  <a
-                    href="https://ethz.ch/content/dam/ethz/special-interest/infk/inst-infsec/information-security-group-dam/research/publications/pub2023/mastercard-usenix23.pdf"
-                    >paper</a
-                  >
-                  on a novel attack for Mastercard cards has been accepted for
-                  <a href="https://www.usenix.org/conference/usenixsecurity23"
-                    >USENIX Security'23</a
-                  >.
-                </div>
-
-                <div class="alert alert-light mb-2">
-                  <i class="bi bi-award-fill me-1"></i> May 2021: Our Oakland'21
-                  <a
-                    href="https://ethz.ch/content/dam/ethz/special-interest/infk/inst-infsec/information-security-group-dam/research/publications/pub2021/emv-sp21.pdf"
-                    >paper</a
-                  >
-                  has won the
-                  <strong
-                    ><a
-                      href="https://twitter.com/IEEESSP/status/1398021192062095361?s=20"
-                      >Best Practical Paper Award</a
-                    ></strong
-                  >!!!
-                </div>
-              </div>
+            <div class="alert alert-dark mb-2">
+              <i class="bi bi-check-circle-fill me-1"></i> Sep 2022: Our
+              <a
+                href="https://ethz.ch/content/dam/ethz/special-interest/infk/inst-infsec/information-security-group-dam/research/publications/pub2023/mastercard-usenix23.pdf"
+                >paper</a
+              >
+              on a novel attack for Mastercard cards has been accepted for
+              <a href="https://www.usenix.org/conference/usenixsecurity23"
+                >USENIX Security'23</a
+              >.
             </div>
-            <div
-              class="tab-pane fade"
-              id="projects"
-              role="tabpanel"
-              aria-labelledby="projects-tab"
-            >
-              <div class="py-3">
-                <h3>Projects</h3>
-                <p>
-                  These are projects where I have contributed in a leading role.
-                  Company-internal projects are not listed here.
-                </p>
-                <div class="table-responsive">
-                  <table class="table table-striped align-middle">
-                    <!-- <thead>
+
+            <div class="alert alert-dark mb-2">
+              <i class="bi bi-award-fill me-1"></i> May 2021: Our Oakland'21
+              <a
+                href="https://ethz.ch/content/dam/ethz/special-interest/infk/inst-infsec/information-security-group-dam/research/publications/pub2021/emv-sp21.pdf"
+                >paper</a
+              >
+              has won the
+              <strong
+                ><a
+                  href="https://twitter.com/IEEESSP/status/1398021192062095361?s=20"
+                  >Best Practical Paper Award</a
+                ></strong
+              >!!!
+            </div>
+          </div>
+        </div>
+        <div
+          class="tab-pane fade"
+          id="projects"
+          role="tabpanel"
+          aria-labelledby="projects-tab"
+        >
+          <div class="py-3">
+            <h3>Projects</h3>
+            <p>
+              These are projects where I have contributed in a leading role.
+              Company-internal projects are not listed here.
+            </p>
+            <div class="table-responsive">
+              <table class="table table-striped align-middle">
+                <!-- <thead>
                       <tr>
                         <th>Project</th>
                         <th>Role and Details</th>
                       </tr>
                     </thead> -->
-                    <tbody>
-                      <tr>
-                        <td>
-                          <strong
-                            >KeyAuthority - PKI &amp; Secrets Management</strong
-                          ><br />
-                          Founder &amp; Lead Engineer | Jan 2025 – Present<br />
-                          <ul class="mt-2 ps-4">
-                            <li>
-                              Architected and implemented a cloud-native PKI and
-                              secrets management platform using Go, ReactJS,
-                              PostgreSQL, Docker, Kubernetes, and Helm.
-                            </li>
-                            <li>
-                              Integrated Keycloak, HSMs, cert-manager, and
-                              GitLab to automate enterprise security workflows.
-                            </li>
-                            <li>
-                              Designed Role-Based Access Control (RBAC),
-                              approval workflows, and cryptographic governance
-                              capabilities.
-                            </li>
-                            <li>
-                              Links:
-                              <a href="https://keyauthority.net" target="_blank"
-                                >Homepage</a
-                              >,
-                              <a
-                                href="https://staging.keyauthority.net"
-                                target="_blank"
-                                >Staging Environment</a
-                              >,
-                              <a
-                                href="https://hub.docker.com/u/keyauthoritydh"
-                                target="_blank"
-                                >Docker Images</a
-                              >,
-                              <a
-                                href="https://artifacthub.io/packages/helm/keyauthority/keyauthority"
-                                target="_blank"
-                                >Helm Chart</a
-                              >
-                            </li>
-                          </ul>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <strong
-                            >Security Analysis of the Next-Generation Payment
-                            Protocol</strong
-                          ><br />
-                          Principal Researcher & Engineer | ETH Zurich (joint
-                          with Mastercard) | Nov 2021 – May 2022<br />
-                          <ul class="mt-2 ps-4">
-                            <li>
-                              Led the formal security analysis of Mastercard's
-                              next-generation in-store payment protocol, known
-                              as EMV C8.
-                            </li>
-                            <li>
-                              Designed and implemented a model checker to verify
-                              security properties of EMV C8.
-                            </li>
-                            <li>
-                              Tech stack:
-                              <a
-                                href="https://tamarin-prover.github.io/"
-                                target="_blank"
-                                >Tamarin prover</a
-                              >, Python.
-                            </li>
-                          </ul>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <strong>Centre for Cyber Trust</strong><br />
-                          Researcher | ETH Zurich (sponsored by Siemens AG) |
-                          Jan 2021 - Dec 2022
-                          <ul class="mt-2 ps-4">
-                            <li>
-                              Contributed to the design and verification of
-                              cyber-trust systems linking the physical and
-                              digital worlds, specializing in document
-                              authentication.
-                            </li>
-                            <li>
-                              Explored potential collaborations with a major
-                              institution in Zurich.
-                            </li>
-                            <li>
-                              Tech stack: Tamarin Prover, Python, Java, Android.
-                            </li>
-                          </ul>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
+                <tbody>
+                  <tr>
+                    <td>
+                      <strong
+                        >KeyAuthority - PKI &amp; Secrets Management</strong
+                      ><br />
+                      Founder &amp; Lead Engineer | Jan 2025 – Present<br />
+                      <ul class="mt-2 ps-4">
+                        <li>
+                          Architected and implemented a cloud-native PKI and
+                          secrets management platform using Go, ReactJS,
+                          PostgreSQL, Docker, Kubernetes, and Helm.
+                        </li>
+                        <li>
+                          Integrated Keycloak, HSMs, cert-manager, and GitLab to
+                          automate enterprise security workflows.
+                        </li>
+                        <li>
+                          Designed Role-Based Access Control (RBAC), approval
+                          workflows, and cryptographic governance capabilities.
+                        </li>
+                        <li>
+                          Links:
+                          <a href="https://keyauthority.net" target="_blank"
+                            >Homepage</a
+                          >,
+                          <a
+                            href="https://staging.keyauthority.net"
+                            target="_blank"
+                            >Staging Environment</a
+                          >,
+                          <a
+                            href="https://hub.docker.com/u/keyauthoritydh"
+                            target="_blank"
+                            >Docker Images</a
+                          >,
+                          <a
+                            href="https://artifacthub.io/packages/helm/keyauthority/keyauthority"
+                            target="_blank"
+                            >Helm Chart</a
+                          >
+                        </li>
+                      </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <strong
+                        >Security Analysis of the Next-Generation Payment
+                        Protocol</strong
+                      ><br />
+                      Principal Researcher & Engineer | ETH Zurich (joint with
+                      Mastercard) | Nov 2021 – May 2022<br />
+                      <ul class="mt-2 ps-4">
+                        <li>
+                          Led the formal security analysis of Mastercard's
+                          next-generation in-store payment protocol, known as
+                          EMV C8.
+                        </li>
+                        <li>
+                          Designed and implemented a model checker to verify
+                          security properties of EMV C8.
+                        </li>
+                        <li>
+                          Tech stack:
+                          <a
+                            href="https://tamarin-prover.github.io/"
+                            target="_blank"
+                            >Tamarin prover</a
+                          >, Python.
+                        </li>
+                      </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <strong>Centre for Cyber Trust</strong><br />
+                      Researcher | ETH Zurich (sponsored by Siemens AG) | Jan
+                      2021 - Dec 2022
+                      <ul class="mt-2 ps-4">
+                        <li>
+                          Contributed to the design and verification of
+                          cyber-trust systems linking the physical and digital
+                          worlds, specializing in document authentication.
+                        </li>
+                        <li>
+                          Explored potential collaborations with a major
+                          institution in Zurich.
+                        </li>
+                        <li>
+                          Tech stack: Tamarin Prover, Python, Java, Android.
+                        </li>
+                      </ul>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
-            <div
-              class="tab-pane fade"
-              id="publications"
-              role="tabpanel"
-              aria-labelledby="publications-tab"
-            >
-              <div class="py-3">
-                <h3>Publications</h3>
-                <p>
-                  These are some of my publications. For a complete list, please
-                  see my
-                  <a
-                    href="https://scholar.google.com/citations?user=mF6Rm5oAAAAJ&hl=en"
-                    >Google Scholar profile</a
-                  >.
-                </p>
+          </div>
+        </div>
+        <div
+          class="tab-pane fade"
+          id="publications"
+          role="tabpanel"
+          aria-labelledby="publications-tab"
+        >
+          <div class="py-3">
+            <h3>Publications</h3>
+            <p>
+              These are some of my publications. For a complete list, please see
+              my
+              <a
+                href="https://scholar.google.com/citations?user=mF6Rm5oAAAAJ&hl=en"
+                >Google Scholar profile</a
+              >.
+            </p>
 
-                <div class="table-responsive">
-                  <table class="table table-striped align-middle">
-                    <thead>
-                      <tr>
-                        <th scope="col">Year</th>
-                        <th scope="col">Title</th>
-                        <th scope="col">Authors</th>
-                        <th scope="col">Venue</th>
-                        <th scope="col">Links</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>2023</td>
-                        <td>
-                          <strong
-                            >SealClub: Computer-aided Paper Document
-                            Authentication</strong
-                          >
-                        </td>
-                        <td>
-                          M. Ochoa, H. Vanegas, J. Toro-Pozo, and D. Basin
-                        </td>
-                        <td>
-                          39th Annual Computer Security Applications Conference
-                          (ACSAC)
-                        </td>
-                        <td>
-                          <a
-                            href="https://people.inf.ethz.ch/basin/pubs/acsac23.pdf"
-                            >PDF</a
-                          >,
-                          <a href="https://doi.org/10.1145/3627106.3627176"
-                            >DOI</a
-                          >
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>2023</td>
-                        <td>
-                          <strong
-                            >Inducing Authentication Failures to Bypass Credit
-                            Card PINs</strong
-                          >
-                        </td>
-                        <td>D. Basin, P. Schaller, and J. Toro-Pozo</td>
-                        <td>32nd USENIX Security Symposium</td>
-                        <td>
-                          <a href="https://emvrace.github.io/">WEB</a>,
-                          <a
-                            href="https://ethz.ch/content/dam/ethz/special-interest/infk/inst-infsec/information-security-group-dam/research/publications/pub2023/mastercard-usenix23.pdf"
-                            >PDF</a
-                          >
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>2021</td>
-                        <td>
-                          <strong
-                            >Card Brand Mixup Attack: Bypassing the PIN in
-                            non-Visa Cards by Using Them for Visa
-                            Transactions</strong
-                          >
-                        </td>
-                        <td>D. Basin, R. Sasse, and J. Toro-Pozo</td>
-                        <td>30th USENIX Security Symposium</td>
-                        <td>
-                          <a href="https://emvrace.github.io/">WEB</a>,
-                          <a
-                            href="https://ethz.ch/content/dam/ethz/special-interest/infk/inst-infsec/information-security-group-dam/research/publications/pub2021/sec21fall-basin.pdf"
-                            >PDF</a
-                          >
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>2021</td>
-                        <td>
-                          <strong>The EMV Standard: Break, Fix, Verify</strong>
-                        </td>
-                        <td>D. Basin, R. Sasse, and J. Toro-Pozo</td>
-                        <td>
-                          42nd IEEE Symposium on Security and Privacy (S&amp;P)
-                        </td>
-                        <td>
-                          <a href="https://emvrace.github.io/">WEB</a>,
-                          <a
-                            href="https://ethz.ch/content/dam/ethz/special-interest/infk/inst-infsec/information-security-group-dam/research/publications/pub2021/emv-sp21.pdf"
-                            >PDF</a
-                          >,
-                          <a
-                            href="https://jorgetp.github.io/assets/img/oakland-award.jpg"
-                            >AWARD</a
-                          >
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>2019</td>
-                        <td>
-                          <strong
-                            >Post-Collusion Security and Distance
-                            Bounding</strong
-                          >
-                        </td>
-                        <td>
-                          S. Mauw, Z. Smith, J. Toro-Pozo, and R. Trujillo-Rasua
-                        </td>
-                        <td>
-                          26th ACM SIGSAC Conference on Computer and
-                          Communications Security (CCS)
-                        </td>
-                        <td>
-                          <a
-                            href="https://jorgetp.github.io/assets/pdf/CCS19.pdf"
-                            >PDF</a
-                          >,
-                          <a href="https://doi.org/10.1145/3319535.3345651"
-                            >DOI</a
-                          >
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>2019</td>
-                        <td>
-                          <strong
-                            >Computational and symbolic analysis of
-                            distance-bounding protocols</strong
-                          >
-                        </td>
-                        <td>J. L. Toro Pozo</td>
-                        <td>PhD thesis, University of Luxembourg</td>
-                        <td>
-                          <a
-                            href="https://jorgetp.github.io/assets/pdf/thesis-jorge.pdf"
-                            >PDF</a
-                          >,
-                          <a href="http://orbilu.uni.lu/handle/10993/39506"
-                            >URL</a
-                          >
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>2018</td>
-                        <td>
-                          <strong
-                            >Automated Identification of Desynchronisation
-                            Attacks on Shared Secrets</strong
-                          >
-                        </td>
-                        <td>
-                          S. Mauw, Z. Smith, J. Toro-Pozo, and R. Trujillo-Rasua
-                        </td>
-                        <td>
-                          23rd European Symposium on Research in Computer
-                          Security (ESORICS)
-                        </td>
-                        <td>
-                          <a href="https://doi.org/10.1007/978-3-319-99073-6_20"
-                            >DOI</a
-                          >
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>2018</td>
-                        <td>
-                          <strong
-                            >Distance-Bounding Protocols: Verification without
-                            Time and Location</strong
-                          >
-                        </td>
-                        <td>
-                          S. Mauw, Z. Smith, J. Toro-Pozo, and R. Trujillo-Rasua
-                        </td>
-                        <td>
-                          39th IEEE Symposium on Security and Privacy (S&amp;P)
-                        </td>
-                        <td>
-                          <a
-                            href="https://jorgetp.github.io/assets/pdf/SP18.pdf"
-                            >PDF</a
-                          >,
-                          <a href="https://doi.org/10.1109/SP.2018.00001"
-                            >DOI</a
-                          >
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>2017</td>
-                        <td>
-                          <strong
-                            >Multiobjective variable mesh optimization</strong
-                          >
-                        </td>
-                        <td>
-                          Y. Salgueiro, J. L. Toro, R. Bello, and R. Falcon
-                        </td>
-                        <td>Annals of Operations Research, 258(2): 869-893</td>
-                        <td>
-                          <a
-                            href="https://jorgetp.github.io/assets/pdf/MOVMO.pdf"
-                            >PDF</a
-                          >,
-                          <a href="https://doi.org/10.1007/s10479-016-2221-5"
-                            >DOI</a
-                          >
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>2016</td>
-                        <td>
-                          <strong
-                            >Optimality Results on the Security of Lookup-Based
-                            Protocols</strong
-                          >
-                        </td>
-                        <td>S. Mauw, J. Toro-Pozo, and R. Trujillo-Rasua</td>
-                        <td>
-                          12th Radio Frequency Identification and IoT Security
-                          Workshop (RFIDSec)
-                        </td>
-                        <td>
-                          <a href="https://doi.org/10.1007/978-3-319-62024-4_10"
-                            >DOI</a
-                          >
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>2016</td>
-                        <td>
-                          <strong
-                            >A Class of Precomputation-Based Distance-Bounding
-                            Protocols</strong
-                          >
-                        </td>
-                        <td>S. Mauw, J. Toro-Pozo, and R. Trujillo-Rasua</td>
-                        <td>
-                          1st IEEE European Symposium on Security and Privacy
-                          (EuroS&amp;P)
-                        </td>
-                        <td>
-                          <a href="https://doi.org/10.1109/EuroSP.2016.19"
-                            >DOI</a
-                          >
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>2014</td>
-                        <td>
-                          <strong
-                            >Noise Detection and Learning Based on Current
-                            Information</strong
-                          >
-                        </td>
-                        <td>
-                          D. Pascual Gonz&aacute;lez; F. D. V&aacute;zquez Mesa;
-                          and J. L. Toro Pozo
-                        </td>
-                        <td>Computaci&oacute;n y Sistemas, 18(1)</td>
-                        <td>
-                          <a
-                            href="http://cys.cic.ipn.mx/ojs/index.php/CyS/article/view/1593"
-                            >URL</a
-                          >
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
+            <div class="table-responsive">
+              <table class="table table-striped align-middle">
+                <thead>
+                  <tr>
+                    <th scope="col">Year</th>
+                    <th scope="col">Title</th>
+                    <th scope="col">Authors</th>
+                    <th scope="col">Venue</th>
+                    <th scope="col">Links</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>2023</td>
+                    <td>
+                      <strong
+                        >SealClub: Computer-aided Paper Document
+                        Authentication</strong
+                      >
+                    </td>
+                    <td>M. Ochoa, H. Vanegas, J. Toro-Pozo, and D. Basin</td>
+                    <td>
+                      39th Annual Computer Security Applications Conference
+                      (ACSAC)
+                    </td>
+                    <td>
+                      <a
+                        href="https://people.inf.ethz.ch/basin/pubs/acsac23.pdf"
+                        >PDF</a
+                      >,
+                      <a href="https://doi.org/10.1145/3627106.3627176">DOI</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>2023</td>
+                    <td>
+                      <strong
+                        >Inducing Authentication Failures to Bypass Credit Card
+                        PINs</strong
+                      >
+                    </td>
+                    <td>D. Basin, P. Schaller, and J. Toro-Pozo</td>
+                    <td>32nd USENIX Security Symposium</td>
+                    <td>
+                      <a href="https://emvrace.github.io/">WEB</a>,
+                      <a
+                        href="https://ethz.ch/content/dam/ethz/special-interest/infk/inst-infsec/information-security-group-dam/research/publications/pub2023/mastercard-usenix23.pdf"
+                        >PDF</a
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>2021</td>
+                    <td>
+                      <strong
+                        >Card Brand Mixup Attack: Bypassing the PIN in non-Visa
+                        Cards by Using Them for Visa Transactions</strong
+                      >
+                    </td>
+                    <td>D. Basin, R. Sasse, and J. Toro-Pozo</td>
+                    <td>30th USENIX Security Symposium</td>
+                    <td>
+                      <a href="https://emvrace.github.io/">WEB</a>,
+                      <a
+                        href="https://ethz.ch/content/dam/ethz/special-interest/infk/inst-infsec/information-security-group-dam/research/publications/pub2021/sec21fall-basin.pdf"
+                        >PDF</a
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>2021</td>
+                    <td>
+                      <strong>The EMV Standard: Break, Fix, Verify</strong>
+                    </td>
+                    <td>D. Basin, R. Sasse, and J. Toro-Pozo</td>
+                    <td>
+                      42nd IEEE Symposium on Security and Privacy (S&amp;P)
+                    </td>
+                    <td>
+                      <a href="https://emvrace.github.io/">WEB</a>,
+                      <a
+                        href="https://ethz.ch/content/dam/ethz/special-interest/infk/inst-infsec/information-security-group-dam/research/publications/pub2021/emv-sp21.pdf"
+                        >PDF</a
+                      >,
+                      <a
+                        href="https://jorgetp.github.io/assets/img/oakland-award.jpg"
+                        >AWARD</a
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>2019</td>
+                    <td>
+                      <strong
+                        >Post-Collusion Security and Distance Bounding</strong
+                      >
+                    </td>
+                    <td>
+                      S. Mauw, Z. Smith, J. Toro-Pozo, and R. Trujillo-Rasua
+                    </td>
+                    <td>
+                      26th ACM SIGSAC Conference on Computer and Communications
+                      Security (CCS)
+                    </td>
+                    <td>
+                      <a href="https://jorgetp.github.io/assets/pdf/CCS19.pdf"
+                        >PDF</a
+                      >,
+                      <a href="https://doi.org/10.1145/3319535.3345651">DOI</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>2019</td>
+                    <td>
+                      <strong
+                        >Computational and symbolic analysis of
+                        distance-bounding protocols</strong
+                      >
+                    </td>
+                    <td>J. L. Toro Pozo</td>
+                    <td>PhD thesis, University of Luxembourg</td>
+                    <td>
+                      <a
+                        href="https://jorgetp.github.io/assets/pdf/thesis-jorge.pdf"
+                        >PDF</a
+                      >,
+                      <a href="http://orbilu.uni.lu/handle/10993/39506">URL</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>2018</td>
+                    <td>
+                      <strong
+                        >Automated Identification of Desynchronisation Attacks
+                        on Shared Secrets</strong
+                      >
+                    </td>
+                    <td>
+                      S. Mauw, Z. Smith, J. Toro-Pozo, and R. Trujillo-Rasua
+                    </td>
+                    <td>
+                      23rd European Symposium on Research in Computer Security
+                      (ESORICS)
+                    </td>
+                    <td>
+                      <a href="https://doi.org/10.1007/978-3-319-99073-6_20"
+                        >DOI</a
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>2018</td>
+                    <td>
+                      <strong
+                        >Distance-Bounding Protocols: Verification without Time
+                        and Location</strong
+                      >
+                    </td>
+                    <td>
+                      S. Mauw, Z. Smith, J. Toro-Pozo, and R. Trujillo-Rasua
+                    </td>
+                    <td>
+                      39th IEEE Symposium on Security and Privacy (S&amp;P)
+                    </td>
+                    <td>
+                      <a href="https://jorgetp.github.io/assets/pdf/SP18.pdf"
+                        >PDF</a
+                      >,
+                      <a href="https://doi.org/10.1109/SP.2018.00001">DOI</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>2017</td>
+                    <td>
+                      <strong>Multiobjective variable mesh optimization</strong>
+                    </td>
+                    <td>Y. Salgueiro, J. L. Toro, R. Bello, and R. Falcon</td>
+                    <td>Annals of Operations Research, 258(2): 869-893</td>
+                    <td>
+                      <a href="https://jorgetp.github.io/assets/pdf/MOVMO.pdf"
+                        >PDF</a
+                      >,
+                      <a href="https://doi.org/10.1007/s10479-016-2221-5"
+                        >DOI</a
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>2016</td>
+                    <td>
+                      <strong
+                        >Optimality Results on the Security of Lookup-Based
+                        Protocols</strong
+                      >
+                    </td>
+                    <td>S. Mauw, J. Toro-Pozo, and R. Trujillo-Rasua</td>
+                    <td>
+                      12th Radio Frequency Identification and IoT Security
+                      Workshop (RFIDSec)
+                    </td>
+                    <td>
+                      <a href="https://doi.org/10.1007/978-3-319-62024-4_10"
+                        >DOI</a
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>2016</td>
+                    <td>
+                      <strong
+                        >A Class of Precomputation-Based Distance-Bounding
+                        Protocols</strong
+                      >
+                    </td>
+                    <td>S. Mauw, J. Toro-Pozo, and R. Trujillo-Rasua</td>
+                    <td>
+                      1st IEEE European Symposium on Security and Privacy
+                      (EuroS&amp;P)
+                    </td>
+                    <td>
+                      <a href="https://doi.org/10.1109/EuroSP.2016.19">DOI</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>2014</td>
+                    <td>
+                      <strong
+                        >Noise Detection and Learning Based on Current
+                        Information</strong
+                      >
+                    </td>
+                    <td>
+                      D. Pascual Gonz&aacute;lez; F. D. V&aacute;zquez Mesa; and
+                      J. L. Toro Pozo
+                    </td>
+                    <td>Computaci&oacute;n y Sistemas, 18(1)</td>
+                    <td>
+                      <a
+                        href="http://cys.cic.ipn.mx/ojs/index.php/CyS/article/view/1593"
+                        >URL</a
+                      >
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
-            <div
-              class="tab-pane fade"
-              id="awards"
-              role="tabpanel"
-              aria-labelledby="awards-tab"
-            >
-              <div class="py-3">
-                <h3>Honors & Awards</h3>
-                <p>These are some of my selected honors and awards.</p>
+          </div>
+        </div>
+        <div
+          class="tab-pane fade"
+          id="awards"
+          role="tabpanel"
+          aria-labelledby="awards-tab"
+        >
+          <div class="py-3">
+            <h3>Honors & Awards</h3>
+            <p>These are some of my selected honors and awards.</p>
 
-                <div class="table-responsive">
-                  <table class="table table-striped align-middle">
-                    <thead>
-                      <tr>
-                        <th scope="col">Year</th>
-                        <th scope="col">Award</th>
-                        <th scope="col">Organization / Context</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>2021</td>
-                        <td>
-                          <strong
-                            ><a
-                              href="https://www.ieee-security.org/TC/SP2021/awards.html"
-                              >Best Practical Paper Award</a
-                            ></strong
-                          >
-                        </td>
-                        <td>
-                          <em
-                            >42nd IEEE Symposium on Security and Privacy
-                            (S&amp;P)</em
-                          >
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>2020</td>
-                        <td>
-                          <strong
-                            ><a
-                              href="https://www.iit.cnr.it/STM-WG/contentpage06.html"
-                              >Best PhD Thesis on Security and Trust
-                              Management</a
-                            ></strong
-                          >
-                        </td>
-                        <td>
-                          <em
-                            >European Research Consortium for Informatics and
-                            Mathematics (<a href="https://www.ercim.eu">ERCIM</a
-                            >)</em
-                          >
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>2019</td>
-                        <td>
-                          <strong>Best Thesis in Computer Science</strong>
-                        </td>
-                        <td><em>University of Luxembourg</em></td>
-                      </tr>
-                      <tr>
-                        <td>2015</td>
-                        <td><strong>AFR-PhD Grant</strong> (~170K euros)</td>
-                        <td>
-                          <em
-                            >Luxembourg National Research Fund (<a
-                              href="https://www.fnr.lu"
-                              >FNR</a
-                            >)</em
-                          >
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
+            <div class="table-responsive">
+              <table class="table table-striped align-middle">
+                <thead>
+                  <tr>
+                    <th scope="col">Year</th>
+                    <th scope="col">Award</th>
+                    <th scope="col">Organization / Context</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>2021</td>
+                    <td>
+                      <strong
+                        ><a
+                          href="https://www.ieee-security.org/TC/SP2021/awards.html"
+                          >Best Practical Paper Award</a
+                        ></strong
+                      >
+                    </td>
+                    <td>
+                      <em
+                        >42nd IEEE Symposium on Security and Privacy
+                        (S&amp;P)</em
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>2020</td>
+                    <td>
+                      <strong
+                        ><a
+                          href="https://www.iit.cnr.it/STM-WG/contentpage06.html"
+                          >Best PhD Thesis on Security and Trust Management</a
+                        ></strong
+                      >
+                    </td>
+                    <td>
+                      <em
+                        >European Research Consortium for Informatics and
+                        Mathematics (<a href="https://www.ercim.eu">ERCIM</a
+                        >)</em
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>2019</td>
+                    <td>
+                      <strong>Best Thesis in Computer Science</strong>
+                    </td>
+                    <td><em>University of Luxembourg</em></td>
+                  </tr>
+                  <tr>
+                    <td>2015</td>
+                    <td><strong>AFR-PhD Grant</strong> (~170K euros)</td>
+                    <td>
+                      <em
+                        >Luxembourg National Research Fund (<a
+                          href="https://www.fnr.lu"
+                          >FNR</a
+                        >)</em
+                      >
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
-            <div
-              class="tab-pane fade"
-              id="teaching"
-              role="tabpanel"
-              aria-labelledby="teaching-tab"
-            >
-              <div class="py-3">
-                <h3>Teaching</h3>
-                <p>
-                  I have been part of the teaching team for the following
-                  courses (2016 to date).
-                </p>
-                <div class="table-responsive">
-                  <table class="table table-striped align-middle">
-                    <thead>
-                      <tr>
-                        <th scope="col">Term</th>
-                        <th scope="col">Course</th>
-                        <th scope="col">Institution</th>
-                        <th scope="col">Description</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>Spring 2022</td>
-                        <td>
-                          <strong
-                            ><a
-                              href="https://infsec.ethz.ch/education/ss2022/infsec.html"
-                              >Information Security</a
-                            ></strong
-                          >
-                        </td>
-                        <td>ETH Zurich</td>
-                        <td>
-                          This course provides an introduction to Information
-                          Security. The focus is on fundamental concepts and
-                          models, basic cryptography, protocols and system
-                          security, and privacy and data protection. While the
-                          emphasis is on foundations, case studies are given
-                          that examine different realizations of these ideas in
-                          practice.
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Autumn 2021</td>
-                        <td>
-                          <strong
-                            ><a
-                              href="https://infsec.ethz.ch/education/as2021/seclab.html"
-                              >Applied Security Laboratory</a
-                            ></strong
-                          >
-                        </td>
-                        <td>ETH Zurich</td>
-                        <td>
-                          This is a hands-on course on applied aspects of
-                          Information Security. It covers topics such as applied
-                          information security, operating system security, OS
-                          hardening, computer forensics, web application
-                          security, design, implementation, and configuration of
-                          security mechanisms, risk analysis, and system review.
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Spring 2021</td>
-                        <td>
-                          <strong
-                            ><a
-                              href="https://systems.ethz.ch/education/courses/2021-spring/big-data-for-engineers.html"
-                              >Big Data for Engineers</a
-                            ></strong
-                          >
-                        </td>
-                        <td>ETH Zurich</td>
-                        <td>
-                          This database course introduces the most recent
-                          advances for scaling storage and querying to Petabytes
-                          of data with trillions of records. The course covers
-                          techniques to work with heterogeneous data sets and
-                          data shapes like trees and graphs.
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Autumn 2020</td>
-                        <td>
-                          <strong
-                            ><a
-                              href="http://www.vvz.ethz.ch/Vorlesungsverzeichnis/lerneinheit.view?semkez=2022W&amp;ansicht=KATALOGDATEN&amp;lerneinheitId=161941&amp;lang=en"
-                              >Information Security Lab</a
-                            ></strong
-                          >
-                        </td>
-                        <td>ETH Zurich</td>
-                        <td>
-                          This InterFocus course provides a broad, hands-on
-                          introduction to Information Security. It introduces
-                          adversarial thinking and security by design as key
-                          approaches to building secure systems.
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Spring 2020</td>
-                        <td>
-                          <strong
-                            ><a
-                              href="http://www.vvz.ethz.ch/Vorlesungsverzeichnis/lerneinheit.view?semkez=2020S&amp;ansicht=KATALOGDATEN&amp;lerneinheitId=137237&amp;lang=en"
-                              >Information Systems for Engineers</a
-                            ></strong
-                          >
-                        </td>
-                        <td>ETH Zurich</td>
-                        <td>
-                          This course provides the basics of relational
-                          databases from the perspective of the user. We
-                          discover why tables are so incredibly powerful to
-                          express relations, learn the SQL query language, and
-                          how to make the most of it. The course also covers
-                          support for data cubes (analytics).
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Autumn 2019</td>
-                        <td>
-                          <strong
-                            ><a
-                              href="https://www.ti.inf.ethz.ch/ew/courses/APC19/index.html"
-                              >Algorithms, Probability, and Computing</a
-                            ></strong
-                          >
-                        </td>
-                        <td>ETH Zurich</td>
-                        <td>
-                          This course focuses on advanced design and analysis
-                          methods for algorithms and data structures, such as
-                          Random(ized) Search Trees, Point Location, Minimum
-                          Cut, Linear Programming, Randomized Algebraic
-                          Algorithms (matchings), Probabilistically Checkable
-                          Proofs (introduction).
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>2016–2018</td>
-                        <td>
-                          <strong
-                            ><a
-                              href="https://satoss.uni.lu/courses/securityprotocols/"
-                              >Security Protocols</a
-                            ></strong
-                          >
-                        </td>
-                        <td>University of Luxembourg</td>
-                        <td>
-                          The course helps students develop their skills in
-                          manual and computer-aided verification of security
-                          protocols.
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>2017</td>
-                        <td><strong>Information Security Basics</strong></td>
-                        <td>University of Luxembourg</td>
-                        <td>
-                          The course covers the basic concepts of Information
-                          Security from a formal methods perspective. These
-                          concepts include protocol execution, threat model,
-                          security properties, and (manual) verification.
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
+          </div>
+        </div>
+        <div
+          class="tab-pane fade"
+          id="teaching"
+          role="tabpanel"
+          aria-labelledby="teaching-tab"
+        >
+          <div class="py-3">
+            <h3>Teaching</h3>
+            <p>
+              I have been part of the teaching team for the following courses
+              (2016 to date).
+            </p>
+            <div class="table-responsive">
+              <table class="table table-striped align-middle">
+                <thead>
+                  <tr>
+                    <th scope="col">Term</th>
+                    <th scope="col">Course</th>
+                    <th scope="col">Institution</th>
+                    <th scope="col">Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Spring 2022</td>
+                    <td>
+                      <strong
+                        ><a
+                          href="https://infsec.ethz.ch/education/ss2022/infsec.html"
+                          >Information Security</a
+                        ></strong
+                      >
+                    </td>
+                    <td>ETH Zurich</td>
+                    <td>
+                      This course provides an introduction to Information
+                      Security. The focus is on fundamental concepts and models,
+                      basic cryptography, protocols and system security, and
+                      privacy and data protection. While the emphasis is on
+                      foundations, case studies are given that examine different
+                      realizations of these ideas in practice.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Autumn 2021</td>
+                    <td>
+                      <strong
+                        ><a
+                          href="https://infsec.ethz.ch/education/as2021/seclab.html"
+                          >Applied Security Laboratory</a
+                        ></strong
+                      >
+                    </td>
+                    <td>ETH Zurich</td>
+                    <td>
+                      This is a hands-on course on applied aspects of
+                      Information Security. It covers topics such as applied
+                      information security, operating system security, OS
+                      hardening, computer forensics, web application security,
+                      design, implementation, and configuration of security
+                      mechanisms, risk analysis, and system review.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Spring 2021</td>
+                    <td>
+                      <strong
+                        ><a
+                          href="https://systems.ethz.ch/education/courses/2021-spring/big-data-for-engineers.html"
+                          >Big Data for Engineers</a
+                        ></strong
+                      >
+                    </td>
+                    <td>ETH Zurich</td>
+                    <td>
+                      This database course introduces the most recent advances
+                      for scaling storage and querying to Petabytes of data with
+                      trillions of records. The course covers techniques to work
+                      with heterogeneous data sets and data shapes like trees
+                      and graphs.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Autumn 2020</td>
+                    <td>
+                      <strong
+                        ><a
+                          href="http://www.vvz.ethz.ch/Vorlesungsverzeichnis/lerneinheit.view?semkez=2022W&amp;ansicht=KATALOGDATEN&amp;lerneinheitId=161941&amp;lang=en"
+                          >Information Security Lab</a
+                        ></strong
+                      >
+                    </td>
+                    <td>ETH Zurich</td>
+                    <td>
+                      This InterFocus course provides a broad, hands-on
+                      introduction to Information Security. It introduces
+                      adversarial thinking and security by design as key
+                      approaches to building secure systems.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Spring 2020</td>
+                    <td>
+                      <strong
+                        ><a
+                          href="http://www.vvz.ethz.ch/Vorlesungsverzeichnis/lerneinheit.view?semkez=2020S&amp;ansicht=KATALOGDATEN&amp;lerneinheitId=137237&amp;lang=en"
+                          >Information Systems for Engineers</a
+                        ></strong
+                      >
+                    </td>
+                    <td>ETH Zurich</td>
+                    <td>
+                      This course provides the basics of relational databases
+                      from the perspective of the user. We discover why tables
+                      are so incredibly powerful to express relations, learn the
+                      SQL query language, and how to make the most of it. The
+                      course also covers support for data cubes (analytics).
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Autumn 2019</td>
+                    <td>
+                      <strong
+                        ><a
+                          href="https://www.ti.inf.ethz.ch/ew/courses/APC19/index.html"
+                          >Algorithms, Probability, and Computing</a
+                        ></strong
+                      >
+                    </td>
+                    <td>ETH Zurich</td>
+                    <td>
+                      This course focuses on advanced design and analysis
+                      methods for algorithms and data structures, such as
+                      Random(ized) Search Trees, Point Location, Minimum Cut,
+                      Linear Programming, Randomized Algebraic Algorithms
+                      (matchings), Probabilistically Checkable Proofs
+                      (introduction).
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>2016–2018</td>
+                    <td>
+                      <strong
+                        ><a
+                          href="https://satoss.uni.lu/courses/securityprotocols/"
+                          >Security Protocols</a
+                        ></strong
+                      >
+                    </td>
+                    <td>University of Luxembourg</td>
+                    <td>
+                      The course helps students develop their skills in manual
+                      and computer-aided verification of security protocols.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>2017</td>
+                    <td><strong>Information Security Basics</strong></td>
+                    <td>University of Luxembourg</td>
+                    <td>
+                      The course covers the basic concepts of Information
+                      Security from a formal methods perspective. These concepts
+                      include protocol execution, threat model, security
+                      properties, and (manual) verification.
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
-            <div
-              class="tab-pane fade"
-              id="talks"
-              role="tabpanel"
-              aria-labelledby="talks-tab"
-            >
-              <div class="p-3">
-                <h3>Talks</h3>
-                <p>These are some of the talks that I've given.</p>
-                <div class="table-responsive">
-                  <table class="table table-striped align-middle">
-                    <thead>
-                      <tr>
-                        <th scope="col">Date</th>
-                        <th scope="col">Talk</th>
-                        <th scope="col">Event</th>
-                        <th scope="col">Location</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>Aug 2021</td>
-                        <td>
-                          <strong
-                            >Card Brand Mixup Attack: Bypassing the PIN in
-                            non-Visa Cards by Using Them for Visa
-                            Transactions</strong
-                          >
-                        </td>
-                        <td>
-                          <a
-                            href="https://www.usenix.org/conference/usenixsecurity21"
-                            >30th USENIX Security Symposium</a
-                          >
-                        </td>
-                        <td>Virtual</td>
-                      </tr>
-                      <tr>
-                        <td>May 2021</td>
-                        <td>
-                          <strong>The EMV Standard: Break, Fix, Verify</strong>
-                        </td>
-                        <td>
-                          <a href="https://www.ieee-security.org/TC/SP2021"
-                            >42nd IEEE Symposium on Security and Privacy
-                            (S&amp;P)</a
-                          >
-                        </td>
-                        <td>Virtual</td>
-                      </tr>
-                      <tr>
-                        <td>May 2021</td>
-                        <td>
-                          <strong
-                            >Trustworthy Components by Example of Security
-                            Protocols</strong
-                          >
-                        </td>
-                        <td>
-                          <a href="https://sscc.ethz.ch"
-                            >Swiss Support Center for Cybersecurity (SSCC)
-                            Workshop on Dependencies</a
-                          >
-                        </td>
-                        <td>Virtual</td>
-                      </tr>
-                      <tr>
-                        <td>Sep 2021</td>
-                        <td>
-                          <strong
-                            >Computational and Symbolic Analysis of
-                            Distance-Bounding Protocols</strong
-                          >
-                        </td>
-                        <td>
-                          <a href="https://hosting.services.iit.cnr.it/stm2020"
-                            >Security and Trust Management (STM) Workshop
-                            2020</a
-                          >
-                        </td>
-                        <td>Virtual</td>
-                      </tr>
-                      <tr>
-                        <td>Nov 2018</td>
-                        <td>
-                          <strong
-                            >Collusion in Security Protocols: Terrorist Fraud as
-                            a Use Case</strong
-                          >
-                        </td>
-                        <td>Infsec Group seminar at ETHZ</td>
-                        <td>Zurich, Switzerland</td>
-                      </tr>
-                      <tr>
-                        <td>Oct 2018</td>
-                        <td>
-                          <strong
-                            >Distance Bounding Protocols: Verification without
-                            Time and Location</strong
-                          >
-                        </td>
-                        <td><a href="https://cispa.de/en">CISPA</a></td>
-                        <td>Saarbrucken, Germany</td>
-                      </tr>
-                      <tr>
-                        <td>Apr 2018</td>
-                        <td>
-                          <strong
-                            >Distance Bounding Protocols: Computational vs.
-                            Symbolic Models</strong
-                          >
-                        </td>
-                        <td>
-                          <a
-                            href="https://www.surrey.ac.uk/events/20180414-futuredb-distance-bounding-past-present-future"
-                            >FutureDB Workshop</a
-                          >
-                        </td>
-                        <td>Azores, Portugal</td>
-                      </tr>
-                      <tr>
-                        <td>Dec 2017</td>
-                        <td>
-                          <strong
-                            >Distance-Bounding Protocols: Verification without
-                            Time and Location</strong
-                          >
-                        </td>
-                        <td>Infsec Group seminar at ETHZ</td>
-                        <td>Zurich, Switzerland</td>
-                      </tr>
-                      <tr>
-                        <td>Nov 2017</td>
-                        <td>
-                          <strong
-                            >On Symbolic Verification of Distance-Bounding
-                            Protocols</strong
-                          >
-                        </td>
-                        <td>
-                          <a href="https://cryptacus.cs.ru.nl">CRYPTACUS'17</a>
-                        </td>
-                        <td>Nijmegen, The Netherlands</td>
-                      </tr>
-                      <tr>
-                        <td>Mar 2017</td>
-                        <td>
-                          <strong
-                            >On the Optimality of Secure Distance
-                            Bounding</strong
-                          >
-                        </td>
-                        <td>
-                          <a href="https://grsrd.uni.lu/2017"
-                            >Grande Region Security and Reliability Day 2017</a
-                          >
-                        </td>
-                        <td>Luxembourg</td>
-                      </tr>
-                      <tr>
-                        <td>Dec 2016</td>
-                        <td>
-                          <strong
-                            >Optimality Results on the Security of Lookup-Based
-                            Protocols</strong
-                          >
-                        </td>
-                        <td>
-                          <a href="https://rfidsec2016.org"
-                            >12th Radio Frequency Identification and IoT
-                            Security Workshop (RFIDSec)</a
-                          >
-                        </td>
-                        <td>Hong Kong, China</td>
-                      </tr>
-                      <tr>
-                        <td>Mar 2016</td>
-                        <td>
-                          <strong
-                            >A class of precomputation-based distance-bounding
-                            protocols</strong
-                          >
-                        </td>
-                        <td>
-                          <a href="https://grsrd16.inria.fr"
-                            >Grande Region Security and Reliability Day 2016</a
-                          >
-                        </td>
-                        <td>Nancy, France</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
+          </div>
+        </div>
+        <div
+          class="tab-pane fade"
+          id="talks"
+          role="tabpanel"
+          aria-labelledby="talks-tab"
+        >
+          <div class="p-3">
+            <h3>Talks</h3>
+            <p>These are some of the talks that I've given.</p>
+            <div class="table-responsive">
+              <table class="table table-striped align-middle">
+                <thead>
+                  <tr>
+                    <th scope="col">Date</th>
+                    <th scope="col">Talk</th>
+                    <th scope="col">Event</th>
+                    <th scope="col">Location</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Aug 2021</td>
+                    <td>
+                      <strong
+                        >Card Brand Mixup Attack: Bypassing the PIN in non-Visa
+                        Cards by Using Them for Visa Transactions</strong
+                      >
+                    </td>
+                    <td>
+                      <a
+                        href="https://www.usenix.org/conference/usenixsecurity21"
+                        >30th USENIX Security Symposium</a
+                      >
+                    </td>
+                    <td>Virtual</td>
+                  </tr>
+                  <tr>
+                    <td>May 2021</td>
+                    <td>
+                      <strong>The EMV Standard: Break, Fix, Verify</strong>
+                    </td>
+                    <td>
+                      <a href="https://www.ieee-security.org/TC/SP2021"
+                        >42nd IEEE Symposium on Security and Privacy
+                        (S&amp;P)</a
+                      >
+                    </td>
+                    <td>Virtual</td>
+                  </tr>
+                  <tr>
+                    <td>May 2021</td>
+                    <td>
+                      <strong
+                        >Trustworthy Components by Example of Security
+                        Protocols</strong
+                      >
+                    </td>
+                    <td>
+                      <a href="https://sscc.ethz.ch"
+                        >Swiss Support Center for Cybersecurity (SSCC) Workshop
+                        on Dependencies</a
+                      >
+                    </td>
+                    <td>Virtual</td>
+                  </tr>
+                  <tr>
+                    <td>Sep 2021</td>
+                    <td>
+                      <strong
+                        >Computational and Symbolic Analysis of
+                        Distance-Bounding Protocols</strong
+                      >
+                    </td>
+                    <td>
+                      <a href="https://hosting.services.iit.cnr.it/stm2020"
+                        >Security and Trust Management (STM) Workshop 2020</a
+                      >
+                    </td>
+                    <td>Virtual</td>
+                  </tr>
+                  <tr>
+                    <td>Nov 2018</td>
+                    <td>
+                      <strong
+                        >Collusion in Security Protocols: Terrorist Fraud as a
+                        Use Case</strong
+                      >
+                    </td>
+                    <td>Infsec Group seminar at ETHZ</td>
+                    <td>Zurich, Switzerland</td>
+                  </tr>
+                  <tr>
+                    <td>Oct 2018</td>
+                    <td>
+                      <strong
+                        >Distance Bounding Protocols: Verification without Time
+                        and Location</strong
+                      >
+                    </td>
+                    <td><a href="https://cispa.de/en">CISPA</a></td>
+                    <td>Saarbrucken, Germany</td>
+                  </tr>
+                  <tr>
+                    <td>Apr 2018</td>
+                    <td>
+                      <strong
+                        >Distance Bounding Protocols: Computational vs. Symbolic
+                        Models</strong
+                      >
+                    </td>
+                    <td>
+                      <a
+                        href="https://www.surrey.ac.uk/events/20180414-futuredb-distance-bounding-past-present-future"
+                        >FutureDB Workshop</a
+                      >
+                    </td>
+                    <td>Azores, Portugal</td>
+                  </tr>
+                  <tr>
+                    <td>Dec 2017</td>
+                    <td>
+                      <strong
+                        >Distance-Bounding Protocols: Verification without Time
+                        and Location</strong
+                      >
+                    </td>
+                    <td>Infsec Group seminar at ETHZ</td>
+                    <td>Zurich, Switzerland</td>
+                  </tr>
+                  <tr>
+                    <td>Nov 2017</td>
+                    <td>
+                      <strong
+                        >On Symbolic Verification of Distance-Bounding
+                        Protocols</strong
+                      >
+                    </td>
+                    <td>
+                      <a href="https://cryptacus.cs.ru.nl">CRYPTACUS'17</a>
+                    </td>
+                    <td>Nijmegen, The Netherlands</td>
+                  </tr>
+                  <tr>
+                    <td>Mar 2017</td>
+                    <td>
+                      <strong
+                        >On the Optimality of Secure Distance Bounding</strong
+                      >
+                    </td>
+                    <td>
+                      <a href="https://grsrd.uni.lu/2017"
+                        >Grande Region Security and Reliability Day 2017</a
+                      >
+                    </td>
+                    <td>Luxembourg</td>
+                  </tr>
+                  <tr>
+                    <td>Dec 2016</td>
+                    <td>
+                      <strong
+                        >Optimality Results on the Security of Lookup-Based
+                        Protocols</strong
+                      >
+                    </td>
+                    <td>
+                      <a href="https://rfidsec2016.org"
+                        >12th Radio Frequency Identification and IoT Security
+                        Workshop (RFIDSec)</a
+                      >
+                    </td>
+                    <td>Hong Kong, China</td>
+                  </tr>
+                  <tr>
+                    <td>Mar 2016</td>
+                    <td>
+                      <strong
+                        >A class of precomputation-based distance-bounding
+                        protocols</strong
+                      >
+                    </td>
+                    <td>
+                      <a href="https://grsrd16.inria.fr"
+                        >Grande Region Security and Reliability Day 2016</a
+                      >
+                    </td>
+                    <td>Nancy, France</td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
           </div>
         </div>

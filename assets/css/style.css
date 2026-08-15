@@ -1,0 +1,30 @@
+body {
+  font-family:
+    "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+:root {
+  --bs-link-color: #d0a84d;
+  --bs-link-hover-color: #e0c77d;
+  --bs-primary: #d0a84d;
+}
+
+a {
+  text-decoration: none;
+  color: #d0a84d;
+}
+a:hover {
+  text-decoration: underline;
+  color: #e0c77d;
+}
+
+.table td,
+.table th {
+  vertical-align: top;
+  color: var(--bs-body-color);
+}
+
+.nav-link {
+  color: #d0a84d;
+}
