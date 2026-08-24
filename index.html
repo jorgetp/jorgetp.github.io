@@ -64,7 +64,7 @@
         <img
           src="assets/img/profile.jpg"
           alt="Profile picture"
-          class="img-fluid rounded-circle p-1 border"
+          class="img-fluid rounded-circle p-1 border d-none d-sm-block"
           style="width: 110px"
         />
       </div>
@@ -281,7 +281,7 @@
               </div>
             </div>
 
-            <h5 class="pb-2">News & Announcements</h5>
+            <!--<h5 class="pb-2">News & Announcements</h5>
 
             <div class="alert alert-dark mb-2" role="alert">
               <i class="bi bi-star-fill me-1"></i>
@@ -317,9 +317,10 @@
                   >Best Practical Paper Award</a
                 ></strong
               >!!!
-            </div>
+            </div>-->
           </div>
         </div>
+
         <div
           class="tab-pane fade"
           id="projects"
@@ -333,86 +334,107 @@
               Company-internal projects are not listed here.
             </p>
 
-            <div>
-              <strong>KeyAuthority - PKI &amp; Secrets Management</strong><br />
-              Founder &amp; Lead Engineer | Jan 2025 – Present<br />
-              <ul class="mt-2 ps-4">
-                <li>
-                  Architected and implemented a cloud-native PKI and secrets
-                  management platform using Go, ReactJS, PostgreSQL, Docker,
-                  Kubernetes, and Helm.
-                </li>
-                <li>
-                  Integrated Keycloak, HSMs, cert-manager, and GitLab to
-                  automate enterprise security workflows.
-                </li>
-                <li>
-                  Designed Role-Based Access Control (RBAC), approval workflows,
-                  and cryptographic governance capabilities.
-                </li>
-                <li>
-                  Links:
-                  <a href="https://keyauthority.net" target="_blank">Homepage</a
-                  >,
-                  <a href="https://staging.keyauthority.net" target="_blank"
-                    >Staging Environment</a
-                  >,
-                  <a
-                    href="https://hub.docker.com/u/keyauthoritydh"
-                    target="_blank"
-                    >Docker Images</a
-                  >,
-                  <a
-                    href="https://artifacthub.io/packages/helm/keyauthority/keyauthority"
-                    target="_blank"
-                    >Helm Chart</a
-                  >
-                </li>
-              </ul>
-            </div>
-
-            <div class="py-1">
-              <strong
-                >Security Analysis of the Next-Generation Payment
-                Protocol</strong
-              ><br />
-              Principal Researcher & Engineer | ETH Zurich (joint with
-              Mastercard) | Nov 2021 – May 2022<br />
-              <ul class="mt-2 ps-4">
-                <li>
-                  Led the formal security analysis of Mastercard's
-                  next-generation in-store payment protocol, known as EMV C8.
-                </li>
-                <li>
-                  Designed and implemented a model checker to verify security
-                  properties of EMV C8.
-                </li>
-                <li>
-                  Tech stack:
-                  <a href="https://tamarin-prover.github.io/" target="_blank"
-                    >Tamarin prover</a
-                  >, Python.
-                </li>
-              </ul>
-            </div>
-
-            <div>
-              <strong>Centre for Cyber Trust</strong><br />
-              Researcher | ETH Zurich (sponsored by Siemens AG) | Jan 2021 - Dec
-              2022
-              <ul class="mt-2 ps-4">
-                <li>
-                  Contributed to the design and verification of cyber-trust
-                  systems linking the physical and digital worlds, specializing
-                  in document authentication.
-                </li>
-                <li>
-                  Explored potential collaborations with a major institution in
-                  Zurich.
-                </li>
-                <li>Tech stack: Tamarin Prover, Java, Android.</li>
-              </ul>
-            </div>
+            <table class="table table-striped">
+              <tbody>
+                <tr>
+                  <td>
+                    <div class="fw-bold">
+                      KeyAuthority - PKI &amp; Secrets Management
+                    </div>
+                    <div class="text-muted mb-1">
+                      Founder &amp; Lead Engineer | Jan 2025 - Present
+                    </div>
+                    <ul>
+                      <li>
+                        Architected and implemented a cloud-native PKI and
+                        secrets management platform using Go, ReactJS,
+                        PostgreSQL, Docker, Kubernetes, and Helm.
+                      </li>
+                      <li>
+                        Integrated Keycloak, HSMs, cert-manager, and GitLab to
+                        automate enterprise security workflows.
+                      </li>
+                      <li>
+                        Designed Role-Based Access Control (RBAC), approval
+                        workflows, and cryptographic governance capabilities.
+                      </li>
+                      <li>
+                        Links:
+                        <a href="https://keyauthority.net" target="_blank"
+                          >Homepage</a
+                        >,
+                        <a
+                          href="https://staging.keyauthority.net"
+                          target="_blank"
+                          >Staging</a
+                        >,
+                        <a
+                          href="https://hub.docker.com/u/keyauthoritydh"
+                          target="_blank"
+                          >Docker Images</a
+                        >,
+                        <a
+                          href="https://artifacthub.io/packages/helm/keyauthority/keyauthority"
+                          target="_blank"
+                          >Helm Chart</a
+                        >
+                      </li>
+                    </ul>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="fw-bold">
+                      Security Analysis of the Next-Generation Payment
+                    </div>
+                    <div class="text-muted mb-1">
+                      Principal Researcher &amp; Engineer | ETH Zurich (joint
+                      with Mastercard) | Nov 2021 - May 2022
+                    </div>
+                    <ul>
+                      <li>
+                        Led the formal security analysis of Mastercard's
+                        next-generation in-store payment protocol, known as EMV
+                        C8.
+                      </li>
+                      <li>
+                        Designed and implemented a model checker to verify
+                        security properties of EMV C8.
+                      </li>
+                      <li>
+                        Tech stack:
+                        <a
+                          href="https://tamarin-prover.github.io/"
+                          target="_blank"
+                          >Tamarin prover</a
+                        >, Python.
+                      </li>
+                    </ul>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="fw-bold">Centre for Cyber Trust</div>
+                    <div class="text-muted mb-1">
+                      Researcher | ETH Zurich (sponsored by Siemens AG) | Jan
+                      2021 - Dec 2022
+                    </div>
+                    <ul>
+                      <li>
+                        Contributed to the design and verification of
+                        cyber-trust systems linking the physical and digital
+                        worlds, specializing in document authentication.
+                      </li>
+                      <li>
+                        Explored potential collaborations with a major
+                        institution in Zurich.
+                      </li>
+                      <li>Tech stack: Tamarin Prover, Java, Android.</li>
+                    </ul>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
         <div
